@@ -1,16 +1,56 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div id="app">
+        <!-- Video Container -->
+        <div class="vid-container">
+            <video id="meditation-video" width="100%" height="300" autoplay loop muted>
+                <source src="Sounds/beach.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
+        <!-- Audio Player -->
+        <div class="player-container">
+            <audio id="meditation-sound" loop>
+                <source src="Sounds/beach.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <!-- Sound Switcher -->
+        <div class="sound-picker">
+            <button class="sound-btn" data-sound="beach">Meditation A (Beach)</button>
+            <button class="sound-btn" data-sound="rain">Meditation B (Rain)</button>
+        </div>
+
+        <!-- Time Selector -->
+        <div class="time-container">
+            <button id="smaller-mins" class="time-select">2 Minutes</button>
+            <button id="medium-mins" class="time-select">5 Minutes</button>
+            <button id="long-mins" class="time-select">10 Minutes</button>
+        </div>
+
+        <!-- Time Display -->
+        <div class="time-display">
+            <h1 id="time-display">10:00</h1>
+        </div>
+
+        <!-- Play/Pause Button -->
+        <div>
+            <button class="play">Play/Pause</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
